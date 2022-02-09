@@ -1,0 +1,21 @@
+{
+  "name": "invoice-app",
+  "version": "1.0.0",
+  "description": "it's an invoice app use in storing customer data and also sending customer data to customer if needed.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "author": "EworldTech",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
