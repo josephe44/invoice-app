@@ -7,12 +7,14 @@ const {
   deleteInvoice,
 } = require('../controllers/invoiceController')
 
-router.get('/', getInvoices)
+const { protect } = require('../middleware/authMiddleware')
 
-router.post('/', setInvoice)
+router.get('/', protect, getInvoices)
 
-router.put('/:id', updateInvoice)
+router.post('/', protect, setInvoice)
 
-router.delete('/:id', deleteInvoice)
+router.put('/:id', protect, updateInvoice)
+
+router.delete('/:id', protect, deleteInvoice)
 
 module.exports = router
